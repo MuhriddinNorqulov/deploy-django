@@ -21,6 +21,8 @@ ExecStart={venv_path}/bin/gunicorn \
           --workers 3 \
           --bind unix:/run/{name}.sock \
           {config_dir_path}.wsgi:application
+[Install]
+WantedBy=multi-user.target
     """
 
     with open(service_file_path, 'w') as f:

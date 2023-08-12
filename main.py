@@ -20,7 +20,7 @@ domain = input("domain (sub.domain.com):")
 if __name__ == '__main__':
 
     make_socket.make_socket(name)
-    make_service.make_service(name, username, root_dir,'{root_dir}/venv', config_path)
+    make_service.make_service(name, username, root_dir, f'{root_dir}/venv', config_path)
 
     start_socket.start_socket(name)
 
